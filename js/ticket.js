@@ -10,8 +10,8 @@ do
     numeroKilometri= prompt("inserisci il numero di kilometri");
     età= prompt("inserisci la tua età");
     
-    }
-while(isNaN(numeroKilometri)||isNaN(età) )
+    } 
+while(isNaN(numeroKilometri)|| isNaN(età) )
 prezzoBiglietto=parseFloat(numeroKilometri*prezzoKilometri,2);
 if(età>18 && età<65)
     {
