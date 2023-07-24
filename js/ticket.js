@@ -1,5 +1,5 @@
 let numeroKilometri;
-let età;
+let eta;
 let prezzoBiglietto;
 const scontoMinorenni=20;
 const scontoPenzionati=40;
@@ -8,22 +8,22 @@ do
     {
     alert("inserisci il valore a numero")
     numeroKilometri= prompt("inserisci il numero di kilometri");
-    età= prompt("inserisci la tua età");
+    eta= prompt("inserisci la tua età");
     
     } 
-while(isNaN(numeroKilometri)|| isNaN(età) )
-prezzoBiglietto=parseFloat(numeroKilometri*prezzoKilometri,2);
-if(età>18 && età<65)
+while(isNaN(numeroKilometri)|| isNaN(eta) )
+prezzoBiglietto=numeroKilometri*prezzoKilometri;
+if(eta>18 && eta<65)
     {
-    alert(prezzoBiglietto)
+    alert(prezzoBiglietto.toFixed(2))
     }
-else if(età>65)
+else if(eta>65)
     {
-    prezzoBiglietto=parseFloat((prezzoBiglietto*scontoPenzionati)/100,2);
-    alert("pensionati",prezzoBiglietto)
+    prezzoBiglietto=(prezzoBiglietto*scontoPenzionati)/100;
+    alert("pensionati" + prezzoBiglietto.toFixed(2))
     }
 else
     {
-    prezzoBiglietto=parseFloat((prezzoBiglietto*scontoMinorenni)/100,2);
-    alert("minorenni",prezzoBiglietto)
+    prezzoBiglietto=(prezzoBiglietto*scontoMinorenni)/100,2;
+    alert("minorenni " + prezzoBiglietto.toFixed(2))
     }
